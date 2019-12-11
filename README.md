@@ -2,6 +2,10 @@
 
 This project will map RADseq data that was generated using the SbfI restriction enzyme to the X. laevis genome version 9.1
 
+# Files are in the directory
+
+/2/scratch/tharindu/allofraseri
+
 # QC and Trimming 
 The first step is to assess quality using fastqc and also identify repetitive sequences in the data (also using fastqc).  This step was already done previously by Ben Furman after demultiplexing the data.  I worked with BenE to make a perl script that does the trimming using `Trimmomatic` version 0.36 and using a modified adapter file in which we added repetitive sequences that were identified with `fastqc` to an adapter file that comes with Trimmomatic ('TruSeq2-PE_for_allofraseri.fa').
 
