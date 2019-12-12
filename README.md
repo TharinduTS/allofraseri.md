@@ -38,3 +38,4 @@ cat CamMale4_a.fq.gz_trimmed.fq.gz CamMale4_b.fq.gz_trimmed.fq.gz >CamMale4_a.fq
 ```
 fastqc <file_name>
 ```
+(available version was fastqc_v0.11.3)
