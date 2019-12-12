@@ -39,3 +39,10 @@ cat CamMale4_a.fq.gz_trimmed.fq.gz CamMale4_b.fq.gz_trimmed.fq.gz >CamMale4_a.fq
 fastqc <file_name>
 ```
 (available version was fastqc_v0.11.3)
+
+# Preparing reference genome
+
+Downloaded X. laevis 9.1 genome using
+```
+wget http://ftp.xenbase.org/pub/Genomics/JGI/Xenla9.1/Xla.v91.repeatMasked.fa.gz
+```
