@@ -47,15 +47,15 @@ Downloaded X. laevis 9.1 genome using
 wget http://ftp.xenbase.org/pub/Genomics/JGI/Xenla9.1/Xla.v91.repeatMasked.fa.gz
 ```
 Unzip the genome
-
+```
 gunzip Xla.v91.repeatMasked.fa.gz
-
+```
 and then index it
-
+```
 bwa index -a bwtsw Xla.v91.repeatMasked.fa
 
 samtools faidx Xla.v91.repeatMasked.fa
-
+```
 and now make a dict file:
 ```
 java -jar /usr/local/picard-tools/picard.jar CreateSequenceDictionary REFERENCE=Xla.v91.repeatMasked.fa OUTPUT=Xla.v91.repeatMasked.dict
