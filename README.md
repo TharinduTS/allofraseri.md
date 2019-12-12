@@ -32,3 +32,9 @@ cat CamMale4_a.fq.gz_trimmed.fq.gz CamMale4_b.fq.gz_trimmed.fq.gz >CamMale4_a.fq
 ```
 
 (and then renamed CamMale4_a.fq.gz_trimmed.fq.gz_c as CamMale4_a.fq.gz_trimmed.fq.gz to match other files)
+
+# FastQC
+
+```
+fastqc <file_name>
+```
