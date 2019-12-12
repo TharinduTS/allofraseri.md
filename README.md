@@ -27,8 +27,8 @@ foreach(@files){
 ```
 # Combining duplicate sequences
 
-'''bash
+```bash
 cat CamMale4_a.fq.gz_trimmed.fq.gz CamMale4_b.fq.gz_trimmed.fq.gz >CamMale4_a.fq.gz_trimmed.fq.gz_c
-'''
+```
 
 (and then renamed CamMale4_a.fq.gz_trimmed.fq.gz_c as CamMale4_a.fq.gz_trimmed.fq.gz to match other files)
