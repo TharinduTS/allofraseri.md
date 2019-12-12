@@ -57,3 +57,6 @@ bwa index -a bwtsw Xla.v91.repeatMasked.fa
 samtools faidx Xla.v91.repeatMasked.fa
 
 and now make a dict file:
+```
+java -jar /usr/local/picard-tools/picard.jar CreateSequenceDictionary REFERENCE=Xla.v91.repeatMasked.fa OUTPUT=Xla.v91.repeatMasked.dict
+```
