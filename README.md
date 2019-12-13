@@ -62,6 +62,7 @@ java -jar /usr/local/picard-tools/picard.jar CreateSequenceDictionary REFERENCE=
 
 ```
 #  OPTIONAL**************************************************
+(to help creating the files that can be easily handled with following script)
 # Abstracting parts of file names
 ```
 ls | grep trimmed.fq.gz_trimmed.fq | sed 's/_a.fq.gz_trimmed.fq.gz_trimmed.fq/.gz/g'
