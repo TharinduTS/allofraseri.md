@@ -79,6 +79,31 @@ for filename in *; do newname=`echo $filename | sed 's/_a.fq.gz_trimmed.fq.gz_tr
 
 # *************************************************************
 
+# Align the fq files using bwa mem and sort them too
+```
+path_to_data="final_renamed"
+path_to_chromosome="reference_genome"
+chromosome="Xla.v91.repeatMasked"
+
+individuals="CamFemale1
+CamFemale2
+CamFemale3
+CamFemale4
+CamMale1
+CamMale2
+CamMale3
+CamMale4
+CamMale5"
+
+for each_individual in $individuals
+do
+
+echo ${each_individual}
+    bwa mem -M -t 16 -r "@RG\tID:FLOWCELL1.LANE6\tSM:${each_individual}\tPL:illumina" $path_to_chromosome/$chromosome.fa $path_to_data/${each_individual}.fq | samtools view -bSh - > $path_to_data/${each_individual}.bam
+    #samtools sort $path_to_data/${each_individual}.bam $path_to_data/${each_individual}_sorted
+    #samtools index $path_to_data/${each_individual}_sorted.bam
+done
+```
 
 
 
