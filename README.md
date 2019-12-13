@@ -68,6 +68,7 @@ ls | grep trimmed.fq.gz_trimmed.fq | sed 's/_a.fq.gz_trimmed.fq.gz_trimmed.fq/.g
 ```
 for filename in *; do newname=`echo $filename | sed 's/_a.fq.gz_trimmed.fq.gz_trimmed.fq/.gz/g'`; mv $filename $newname; done
 ```
+(used "*" because all the files in the directory needed to be renamed)
 
 
 
