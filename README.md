@@ -105,6 +105,10 @@ echo ${each_individual}
     samtools index $path_to_data/${each_individual}_sorted.bam
 done
 ```
+# Merging bam files, filtering and creating vcf
+```
+samtools mpileup -d8000 -ugf ../reference_genome/Xla.v91.repeatMasked.fa -t DP,AD CamFemale1_sorted.bam  CamFemale4_sorted.bam  CamMale3_sorted.bam CamFemale2_sorted.bam  CamMale1_sorted.bam    CamMale4_sorted.bam CamFemale3_sorted.bam  CamMale2_sorted.bam    CamMale5_sorted.bam | bcftools call -V indels --format-fields GQ -m -O z | bcftools filter -e 'FORMAT/GT = "." || FORMAT/DP < 10 || FORMAT/GQ < 20 || FORMAT/GQ = "."' -O z -o Cam_merged_sorted.bam.vcf.gz
+```
 
 
 
