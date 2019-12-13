@@ -64,6 +64,11 @@ java -jar /usr/local/picard-tools/picard.jar CreateSequenceDictionary REFERENCE=
 ```
 ls | grep trimmed.fq.gz_trimmed.fq | sed 's/_a.fq.gz_trimmed.fq.gz_trimmed.fq/.gz/g'
 ```
+# removing .gz
+
+```
+ls | grep Cam | sed 's/.gz//g'
+```
 # changing the names of multiple files
 ```
 for filename in *; do newname=`echo $filename | sed 's/_a.fq.gz_trimmed.fq.gz_trimmed.fq/.gz/g'`; mv $filename $newname; done
