@@ -59,7 +59,9 @@ samtools faidx Xla.v91.repeatMasked.fa
 and now make a dict file:
 ```
 java -jar /usr/local/picard-tools/picard.jar CreateSequenceDictionary REFERENCE=Xla.v91.repeatMasked.fa OUTPUT=Xla.v91.repeatMasked.dict
+
 ```
+# *****************************OPTIONAL*****************************
 # Abstracting parts of file names
 ```
 ls | grep trimmed.fq.gz_trimmed.fq | sed 's/_a.fq.gz_trimmed.fq.gz_trimmed.fq/.gz/g'
@@ -74,6 +76,8 @@ ls | grep Cam | sed 's/.gz//g'
 for filename in *; do newname=`echo $filename | sed 's/_a.fq.gz_trimmed.fq.gz_trimmed.fq/.gz/g'`; mv $filename $newname; done
 ```
 (used "*" because all the files in the directory needed to be renamed)
+
+# ******************************************************************
 
 
 
