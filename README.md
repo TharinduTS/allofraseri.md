@@ -60,11 +60,11 @@ and now make a dict file:
 ```
 java -jar /usr/local/picard-tools/picard.jar CreateSequenceDictionary REFERENCE=Xla.v91.repeatMasked.fa OUTPUT=Xla.v91.repeatMasked.dict
 ```
-#Abstracting parts of file names
+# Abstracting parts of file names
 ```
 ls | grep trimmed.fq.gz_trimmed.fq | sed 's/_a.fq.gz_trimmed.fq.gz_trimmed.fq/.gz/g'
 ```
-#changing the names of multiple files
+# changing the names of multiple files
 ```
 for filename in *; do newname=`echo $filename | sed 's/_a.fq.gz_trimmed.fq.gz_trimmed.fq/.gz/g'`; mv $filename $newname; done
 ```
