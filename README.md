@@ -101,8 +101,8 @@ do
 
 echo ${each_individual}
     bwa mem -M -t 16 -r "@RG\tID:FLOWCELL1.LANE6\tSM:${each_individual}\tPL:illumina" $path_to_chromosome/$chromosome.fa $path_to_data/${each_individual}.fq | samtools view -bSh - > $path_to_data/${each_individual}.bam
-    #samtools sort $path_to_data/${each_individual}.bam $path_to_data/${each_individual}_sorted
-    #samtools index $path_to_data/${each_individual}_sorted.bam
+    samtools sort $path_to_data/${each_individual}.bam $path_to_data/${each_individual}_sorted
+    samtools index $path_to_data/${each_individual}_sorted.bam
 done
 ```
 
