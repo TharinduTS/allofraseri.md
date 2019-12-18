@@ -10,6 +10,10 @@ This project will map RADseq data that was generated using the SbfI restriction 
 The first step is to assess quality using fastqc and also identify repetitive sequences in the data (also using fastqc).  This step was already done previously by Ben Furman after demultiplexing the data.  I worked with BenE to make a perl script that does the trimming using `Trimmomatic` version 0.36 and using a modified adapter file in which we added repetitive sequences that were identified with `fastqc` to an adapter file that comes with Trimmomatic ('TruSeq2-PE_for_allofraseri.fa').
 
 ```perl
+make this executable by chmod -x or use
+``
+perl <script_name>
+```
 #!/usr/bin/perl
 # This script will use trimmomatic to trim all of the fastq reads  
 
