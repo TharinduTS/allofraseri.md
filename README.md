@@ -27,7 +27,7 @@ foreach(@files){
 
 ```
 make this executable by chmod -x or use
-``
+```
 perl <script_name>
 ```
 # Combining duplicate sequences
