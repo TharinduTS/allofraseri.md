@@ -130,5 +130,9 @@ samtools mpileup -d8000 -ugf ../reference_genome/Xla.v91.repeatMasked.fa -t DP,A
 ```
 samtools mpileup -d8000 -ugf ../reference_genome/Xla.v91.repeatMasked.fa -t DP,AD CamFemale1_sorted.bam  CamFemale4_sorted.bam  CamMale3_sorted.bam CamFemale2_sorted.bam  CamMale1_sorted.bam    CamMale4_sorted.bam CamFemale3_sorted.bam  CamMale2_sorted.bam    CamMale5_sorted.bam | bcftools call -V indels --format-fields GQ -m -O z -O z -o Cam_merged_sorted.bam.vcf.gz
 ```
+# For Trop, Laevis,Gilli filtered VCF again with
 
+```bash
+vcftools --gzvcf ../all_sorted_bam/xlaevis_and_xgilli_sorted.bam.vcf.gz --minGQ 20 --minDP 25 --recode --recode-INFO-all --out ../final_vcf/xlaevis_and_xgilli_all_final
+```
 
